@@ -1,2 +1,2 @@
 # springboot
-maven springboot jdk1.7,jsp ,redis,mysql ,thymeleaf,
+maven springboot jdk1.7,jsp ,redis,mysql ,thymeleaf,html
