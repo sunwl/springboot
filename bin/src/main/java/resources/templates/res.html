@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+</head>
+<body>
+success
+<form action="/spt/toCon" method="post">
+
+    <button>跳转首页</button>
+
+</form>
+<form action="/spt/toCon" method="post">
+    <input type="hidden" value="/user/findAll" name="a"></input><br/>
+
+    <button>跳转列表</button>
+
+</form>
+<table>
+    <tr th:each="collect,iterStat : ${collects}">
+        <th scope="row" th:text="${collect.id}">${collect.id}</th>
+        <td>
+            <!-- <img th:src="${collect.name}"/>-->
+        <th th:text="${collect.id}">${collect.id}</th>
+        </td>
+        <td th:text="${collect.name}">${collect.name}</td>
+        <td th:text="${collect.info}">${collect.info}</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+    <style type="text/css">
+        .headd {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 30px;
+            background-color: #FF0000;
+            z-index: 9999;
+            text-align: center;
+        }
+        .bottomdiv {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 50px;
+            background-color: #00FF00;
+            z-index: 9999;
+            text-align: center;
+        }
+        .bottomdiv table{
+            width: 100%;
+        }
+        #submitbtn{
+            color: aqua;
+            background-color: blue;
+            margin: auto;
+            align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="headd ">
+    用户列表
+</div>
+<div class="bottomdiv">
+    <table border="0px" >
+        <tr>
+            <td>
+                <form action="#"
+                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}"
+                      method="post">
+                    <input type="submit" value="跳转首页"></input>
+                </form>
+            </td>
+            <td>
+                <form action="#"
+                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}"
+                      method="post">
+                    <input type="hidden" value="/user/findAll" name="a"></input>
+                    <input type="submit" value="跳转列表"></input>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+
+<table>
+    <tr th:each="collect,iterStat : ${collects}">
+        <th scope="row" th:text="${collect.id}">${collect.id}</th>
+        <td>
+            <!-- <img th:src="${collect.name}"/>-->
+        <th th:text="${collect.id}">${collect.id}</th>
+        </td>
+        <td th:text="${collect.name}">${collect.name}</td>
+        <td th:text="${collect.info}">${collect.info}</td>
+    </tr>
+</table>
+
+<a th:href="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}">Test</a>
+</body>
+</html>

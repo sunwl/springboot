@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+</head>
+<body>
+<form action="/spt/toCon" method="post">
+    姓名：<input type="text" th:value="${name}" name="name"></input><br/>
+    年龄：<input type="text" th:value="${age}" name="age"></input><br/>
+    简介：<input type="text" th:value="${info}" name="info"></input><br/>
+    <input type="hidden" value="/user/save" name="a"></input><br/>
+    <button>保存</button>
+</form>
+</body>
+</html>
