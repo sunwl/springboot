@@ -16,10 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
-@RequestMapping("/spt")
 @Controller
-public class ToController {
-    private static final Logger logger = LogManager.getLogger(ToController.class);
+public class ThisController {
+    private static final Logger logger = LogManager.getLogger(ThisController.class);
     @Autowired
     private SeeService seeService;
 

@@ -47,7 +47,6 @@ public class ToController {
         li.add("描述");
         li.add("日期");
         li.add("info");
-        logger.info(88888888+mysee.size());
         ModelAndView mv = new ModelAndView("jsp/info");
         mv.addObject("mysees",mysee);
         mv.addObject("myseehead",li);
