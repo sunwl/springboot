@@ -1,5 +1,11 @@
-document.write("<script language=javascript src='/mygod/js/Chart3.0.js'></script>");
-document.write("<script language=javascript src='/mygod/js/jquery.min.js'></script>");
+var pathName=window.document.location.pathname;
+var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+var char3="<script language=javascript src='"+projectName+"/js/Chart3.0.js' ></script>";
+var jquery="<script language=javascript src='"+projectName+"/js/jquery.min.js'></script>";
+//console.log(char3)
+//console.log(jquery)
+document.write(char3);
+document.write(jquery);
 
 // 设置参数 圆饼
 var data = {
@@ -271,7 +277,7 @@ function ajaxs(result) {
 
 
 function clockquery(){
-    $.ajax({ type: 'POST',url:"/mygod/spt/ajaxdata",async:true,
+    $.ajax({ type: 'POST',url:projectName+"/spt/ajaxdata",async:true,
         success:function(result){
           ajaxs(result);
         }});
