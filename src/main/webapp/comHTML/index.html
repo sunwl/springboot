@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+
+    <script th:src="@{/js/mybar.js}"></script>
+
+    <style type="text/css">
+        .bar {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 30px;
+            background-color: #FF0000;
+            z-index: 9999;
+            text-align: center;
+        }
+       .bar table{
+           width:100%
+       }
+
+        .headbar {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 30px;
+            background-color: #00FF00;
+            z-index: 9999;
+            text-align: center;
+        }
+        .form{
+         margin-top: 50px;
+
+        }
+        .bar0 table tbody{
+            background-color: aqua;
+
+        }
+        #myChart{
+            width: 500px; height: 445px;
+        }
+        #myChart1{
+            width: 500px; height: 445px;
+        }
+        #myChart2{
+            width: 500px; height: 445px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+<div class="headbar" onload="init()">
+
+
+</div>
+<form action="#"
+      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}"
+      method="post" class="form">
+    姓名：<input type="text" th:value="${name}" name="name"></input><br/>
+    年龄：<input type="text" th:value="${age}" name="age"></input><br/>
+    简介：<input type="text" th:value="${info}" name="info"></input><br/>
+    <input type="hidden" value="/user/save" name="a"></input><br/>
+    <button>保存</button>
+</form>
+<div class="bar0">
+<table>
+    <tbody >
+    <tr >
+        <td>
+            <!-- 展示canvas -->
+            <div id="myChartdiv">
+                <canvas id="myChart"></canvas>
+            </div>
+        </td>
+        <td>
+            <div id="myChart1tdiv">
+            <canvas id="myChart1" ></canvas>
+            </div>
+        </td>
+        <td>
+            <div id="myChart2tdiv">
+                <canvas id="myChart2"  ></canvas>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="bar">
+    <table>
+        <tr>
+            <td>
+                <form action="#"
+                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon1'}"
+                      method="post">
+                    <input type="submit" value="跳转到JSP1"></input>
+                </form>
+            </td>
+            <td>
+                <form action="#"
+                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toFrame'}"
+                      method="post">
+                    <input type="submit" value="跳转到JSP2"></input>
+                </form>
+            </td>
+
+            <td>
+                <button onclick="ffks()" >刷新图形</button>
+
+            </td>
+            <td>
+
+                <button onclick="f2()" >停止刷新</button>
+
+            </td>
+        </tr>
+    </table>
+
+
+
+</div>
+<script th:src="@{/js/mybar.js}"></script>
+</body>
+</html>
