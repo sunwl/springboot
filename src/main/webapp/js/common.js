@@ -4,8 +4,8 @@ var char3="<script language=javascript src='"+projectName+"/js/Chart3.0.js' ></s
 var jquery="<script language=javascript src='"+projectName+"/js/jquery.min.js'></script>";
 var bootstrap="<script language=javascript src='"+projectName+"/bootstrap/js/bootstrap.min.js' ></script>";
 var mainjs="<script language=javascript src='"+projectName+"/js/main.js' ></script>";
-document.write(char3);
 document.write(jquery);
+document.write(char3);
 document.write(bootstrap);
 document.write(mainjs);
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>main</title>
-    <script th:src="@{/js/mybar.js}"></script>
+
 </head>
 <body style="overflow-y: auto">
 <div>
@@ -92,7 +92,7 @@
             </div>
         </div>
     </div>
-    <div style="float:left;width: 82% ;height: 80%;margin-top:0.5%">
+    <div style="float:left;width: 82% ;height: 80%;margin-top:0.5%;padding-left: 10px">
         <a id="mainid" target="right" th:href="@{/fw?commond=/todefault}" style="visibility: hidden">aa</a>
         <iframe frameborder="0"  name="right" style="width: 100%;overflow-x:hidden;overflow-y:hidden;height: 350px ">
         </iframe>
@@ -101,6 +101,13 @@
         <div style="width: 100%;background-color: #ac2925 ;height: 100% " align="center">NB系统  V3.0</div>
     </footer>
 </div>
-
+<script th:src="@{/js/mybar.js}"></script>
+<script>
+    $(function(){
+        //  $("#mainid").click();这种方式不能触发a的click事件，原因是jQuery的click触发的是元素onClick方法，而不是click点击事件
+        $("#mainid")[0].click();
+        //document.getElementById("mainid").click();
+    });
+</script>
 </body>
 </html>
