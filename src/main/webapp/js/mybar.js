@@ -1,9 +1,3 @@
-    var pathName = window.document.location.pathname;
-    var projectName = pathName.substring(0, pathName.substr(1).indexOf('/') + 1);
-    var common = "<script language=javascript src='" + projectName + "/js/common.js' ></script>";
-    document.write(common);
-
-
 // 设置参数 圆饼
     var data = {
         labels: [
@@ -27,8 +21,7 @@
             }]
     };
 
-
-// Get the context of the canvas element we want to select
+    // Get the context of the canvas element we want to select
     var ctx = document.getElementById("myChart").getContext("2d");
     var myPieChart = new Chart(ctx, {
         type: 'pie',
@@ -279,7 +272,7 @@
 
     }
 
-    var ff = self.setInterval("clockquery()", 4000);
+    var ff = self.setInterval("clockquery()", 5000);
 
 
     function f2() {
@@ -287,5 +280,6 @@
     }
 
     function ffks() {
-        ff = self.setInterval("clockquery()", 4000);
+        ff = self.setInterval("clockquery()", 5000);
     }
+
