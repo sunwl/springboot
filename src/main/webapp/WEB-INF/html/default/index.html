@@ -8,15 +8,14 @@
         <!--console.info(context);-->
     <!--</script>-->
     <script th:src="@{/js/mybar.js}"></script>
-
 </head>
 <body>
 <div class="container">
     <form action="#"
           th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/fw'}"
           method="post">
-        <input type="hidden" name="commond" value="toCon"/>
-    <div class="modal-dialog" style="margin-top: 10%;">
+        <input type="hidden" name="commond" value="tomain"/>
+    <div class="modal-dialog" style="margin-top: 10%;width: 400px;">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title text-center" id="myModalLabel">登录</h4>

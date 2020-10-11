@@ -39,9 +39,6 @@
 </head>
 <body class="text-align:center ">
 
-<div class="hediv">
-   Info jsp
-</div>
 
 
 <div >
@@ -65,12 +62,12 @@
     </tbody>
 </table>
 </div>
-<div class="bar">
+
 <form action="<%=basePath%>/spt/toJspadd"
       method="post" class="background-color:black">
     <div align="center">
     <input type="submit" id="submitbtn" value="跳转ADD">
-    </div>
+
 </form>
 </div>
 </body>

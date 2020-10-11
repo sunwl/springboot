@@ -1,4 +1,5 @@
 
+git pull origin master
 
 git commit -m "我爱你中国"
 

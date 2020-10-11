@@ -1,29 +1,28 @@
 package com.springboot.service.userservice.impl;
 
-import java.util.List;
-
+import com.springboot.bean.user.NbUser;
+import com.springboot.dao.NbUserDao;
+import com.springboot.service.userservice.NbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.springboot.bean.user.User;
-import com.springboot.dao.UserDao;
-import com.springboot.service.userservice.UserService;
+import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class NbUserServiceImpl implements NbUserService {
 
     @Autowired
-    private UserDao userDao;
+    private NbUserDao nbUserDao;
 
     @Transactional
-    public void save(User user) {
-        userDao.save(user);
+    public void save(NbUser user) {
+        nbUserDao.save(user);
     }
 
-    public List<User> findAll() {
-        System.out.println("yun行了findall()");
-        return userDao.findAll();
+    public List<NbUser> findAll() {
+        System.out.println("nbUserDao+++++yun行了findall()");
+        return nbUserDao.findAll();
     }
 
 }

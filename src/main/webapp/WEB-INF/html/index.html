@@ -39,24 +39,14 @@
             background-color: aqua;
 
         }
-        #myChart{
-            width: 500px; height: 445px;
-        }
-        #myChart1{
-            width: 500px; height: 445px;
-        }
-        #myChart2{
-            width: 500px; height: 445px;
-        }
+
     </style>
 
 
 
 </head>
 <body>
-<div class="headbar" onload="init()">
-
-
+<div  onload="init()">
 </div>
 <form action="#"
       th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}"

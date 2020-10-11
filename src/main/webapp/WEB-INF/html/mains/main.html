@@ -4,123 +4,103 @@
     <meta charset="UTF-8"/>
     <title>main</title>
     <script th:src="@{/js/mybar.js}"></script>
-    <style type="text/css">
-        .bar {
-            position: fixed;
-            left: 0px;
-            bottom: 0px;
-            width: 100%;
-            height: 30px;
-            background-color: #FF0000;
-            z-index: 9999;
-            text-align: center;
-        }
-       .bar table{
-           width:100%
-       }
-
-        .headbar {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 30px;
-            background-color: #00FF00;
-            z-index: 9999;
-            text-align: center;
-        }
-        .form{
-         margin-top: 50px;
-
-        }
-        .bar0 table tbody{
-            background-color: aqua;
-
-        }
-        #myChart{
-            width: 500px; height: 445px;
-        }
-        #myChart1{
-            width: 500px; height: 445px;
-        }
-        #myChart2{
-            width: 500px; height: 445px;
-        }
-    </style>
-
-
-
 </head>
-<body>
-<div class="headbar" onload="init()">
-</div>
-<form action="#"
-      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon'}"
-      method="post" class="form">
-    姓名：<input type="text" th:value="${name}" name="name"></input><br/>
-    年龄：<input type="text" th:value="${age}" name="age"></input><br/>
-    简介：<input type="text" th:value="${info}" name="info"></input><br/>
-    <input type="hidden" value="/user/save" name="a"></input><br/>
-    <button>保存</button>
-</form>
-<div class="bar0">
-<table>
-    <tbody >
-    <tr >
-        <td>
-            <!-- 展示canvas -->
-            <div id="myChartdiv">
-                <canvas id="myChart"></canvas>
+<body style="overflow-y: auto">
+<div>
+    <nav class="navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">NB系统</a>
             </div>
-        </td>
-        <td>
-            <div id="myChart1tdiv">
-            <canvas id="myChart1" ></canvas>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登出</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="width: 18%;float:left;">
+        <div style="margin-left: 20%;margin-top: 10%">
+            <div class="thumbnail" style="height:50px;width:50px;"><img src=""/></div>
+             <h3>userName</h3>
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title glyphicon glyphicon-bookmark">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseOne">
+                            系统参数管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <span style="margin-left: 15%">用户管理</span>
+                    </div>
+                    <div class="panel-body">
+                        <span style="margin-left: 15%">角色管理</span>
+                    </div>
+                </div>
             </div>
-        </td>
-        <td>
-            <div id="myChart2tdiv">
-                <canvas id="myChart2"  ></canvas>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title glyphicon glyphicon-hand-right">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseTwo">
+                            活动管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <span style="margin-left: 15%"> 科目管理</span>
+                    </div>
+                    <div class="panel-body">
+                        <span style="margin-left: 15%"> 营销活动管理</span>
+                    </div>
+                </div>
             </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title glyphicon glyphicon-list">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseThree">
+                            合作商管理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <span style="margin-left: 15%">积分调整</span>
+                    </div>
+                    <div class="panel-body">
+                        <span style="margin-left: 15%"> 积分转移</span>
+                    </div>
+                    <div class="panel-body">
+                        <span style="margin-left: 15%"><a th:href="@{/fw?commond=/todefault}" target="right">测试Html</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion"
+                       href="#">
+                        系统登出
+                    </a>
+                </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="float:left;width: 82% ;height: 80%;margin-top:0.5%">
+        <a id="mainid" target="right" th:href="@{/fw?commond=/todefault}" style="visibility: hidden">aa</a>
+        <iframe frameborder="0"  name="right" style="width: 100%;overflow-x:hidden;overflow-y:hidden;height: 350px ">
+        </iframe>
+    </div>
+    <footer class="navbar-fixed-bottom" style="background-color: #ac2925;height: 8% ;">
+        <div style="width: 100%;background-color: #ac2925 ;height: 100% " align="center">NB系统  V3.0</div>
+    </footer>
 </div>
 
-<div class="bar">
-    <table>
-        <tr>
-            <td>
-                <form action="#"
-                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toCon1'}"
-                      method="post">
-                    <input type="submit" value="跳转到JSP1"></input>
-                </form>
-            </td>
-            <td>
-                <form action="#"
-                      th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toFrame'}"
-                      method="post">
-                    <input type="submit" value="跳转到JSP2"></input>
-                </form>
-            </td>
-
-            <td>
-                <button onclick="ffks()" >刷新图形</button>
-
-            </td>
-            <td>
-
-                <button onclick="f2()" >停止刷新</button>
-
-            </td>
-        </tr>
-    </table>
-
-
-
-</div>
-<script th:src="@{/js/mybar.js}"></script>
 </body>
 </html>

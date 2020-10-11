@@ -22,21 +22,29 @@ public class ThisController {
     @Autowired
     private SeeService seeService;
 
-    @RequestMapping("/toCon")
-    public String to(HttpServletRequest r, HttpServletResponse m, String a) {
+    @RequestMapping("/tomain")
+    public ModelAndView to(Model model,HttpServletRequest r, HttpServletResponse m, String a) {
         logger.info("to(HttpServletRequest r,HttpServletResponse m,String a)" + m);
         String st = r.getContextPath();
         StringBuffer sf = r.getRequestURL();
         String re = r.getRequestURI();
-        logger.info(st + "to(HttpServletRequest r,HttpServletResponse m,String a)");
-        logger.info(sf.toString() + "to(HttpServletRequest r,HttpServletResponse m,String a)");
-        logger.info(re + "to(HttpServletRequest r,HttpServletResponse m,String a)");
-        logger.info(a + "to(HttpServletRequest r,HttpServletResponse m,String a)");
-        if (a == null) a = "/user/index";
-        String forward = "forward:" + a;
-        return forward;
+        model.addAttribute("name", "jack");
+        model.addAttribute("age", 20);
+        model.addAttribute("info", "我是一个爱学习的好青年");
+        logger.info("跳转到mains/main.html页面");
+        ModelAndView modelandview = new ModelAndView("mains/main");
+        return modelandview;
     }
 
+    @RequestMapping("/todefault")
+    public ModelAndView toDefault(Model model) {
+        model.addAttribute("name", "jack");
+        model.addAttribute("age", 20);
+        model.addAttribute("info", "我是一个爱学习的好青年");
+        logger.info("index(Model model)");
+        ModelAndView modelandview = new ModelAndView("/mains/default");
+        return modelandview;
+    }
     @RequestMapping("/toCon1")
     public ModelAndView toM(MySee user) {
         logger.info("modelandviewto JSP");
@@ -119,13 +127,13 @@ public class ThisController {
         map.put("li1",ta1);
         map.put("li2",ta2);
         map.put("li3",ta3);
-       // redisUtil.setPipelineString();
+        // redisUtil.setPipelineString();
         return  map;
     }
-  public String getread(){
+    public String getread(){
         Random r = new Random();
         int ran3 = r.nextInt(10000000);
         logger.info(ran3);
         return ran3+"";
-  }
+    }
 }

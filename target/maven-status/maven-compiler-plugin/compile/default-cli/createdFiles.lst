@@ -1,10 +1,13 @@
 com\springboot\service\connservice\SeeService.class
 com\springboot\springconfig\WebViewConfig.class
 com\springboot\dao\CommonDao.class
+com\springboot\service\userservice\impl\NbUserServiceImpl.class
 com\springboot\bean\user\User.class
-com\springboot\service\userservice\impl\UserServiceImpl.class
+com\springboot\dao\NbUserDao.class
 com\springboot\util\Publisher.class
+com\springboot\service\userservice\impl\UserServiceImpl.class
 com\springboot\util\Channel.class
+com\springboot\controller\conn\FowordController.class
 com\springboot\springconfig\ViewResolverConfiguration$WebConfig.class
 com\springboot\dao\UserDao.class
 com\springboot\controller\user\UserController.class
@@ -12,9 +15,11 @@ com\springboot\dao\TheNextCommonDao.class
 com\springboot\util\SubThread.class
 configSet\WebViewConfig.class
 com\springboot\service\connservice\impl\SeeServiceImpl.class
-com\springboot\springconfig\ViewResolverConfiguration.class
 com\springboot\util\RedisUtil.class
+com\springboot\springconfig\ViewResolverConfiguration.class
 com\springboot\AppBoot.class
+com\springboot\bean\user\NbUser.class
+com\springboot\controller\DefaultPage.class
 com\springboot\bean\base\BaseBean.class
 com\springboot\dao\TheNextCommonDaoImp.class
 com\springboot\util\Subscriber.class
@@ -22,4 +27,6 @@ com\springboot\util\TestPublisher.class
 com\springboot\controller\conn\ToController.class
 com\springboot\dao\SeeDao.class
 com\springboot\bean\user\MySee.class
+com\springboot\controller\conn\ThisController.class
+com\springboot\service\userservice\NbUserService.class
 com\springboot\service\userservice\UserService.class

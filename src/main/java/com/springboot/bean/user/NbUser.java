@@ -2,17 +2,29 @@ package com.springboot.bean.user;
 
 import com.springboot.bean.base.BaseBean;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.Date;
 
 @Entity
-@Table(name = "test")
-public class User extends BaseBean {
+@Table(name = "NB_USER")
+public class NbUser extends BaseBean {
 
+    private String userid;
+    @Column(name = "name", nullable = true, length = 80)
     private String name;
-    private int age;
+    private String passw;
     private String info;
+    private String tellno;
+    private String email;
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
 
     public String getName() {
         return name;
@@ -22,12 +34,12 @@ public class User extends BaseBean {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getPassw() {
+        return passw;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setPassw(String passw) {
+        this.passw = passw;
     }
 
     public String getInfo() {
@@ -38,10 +50,43 @@ public class User extends BaseBean {
         this.info = info;
     }
 
-    @Override
-    public String toString() {
-        return "User [name=" + name + ", age=" + age + ", info=" + info + ", id=" + getId() + "]";
+    public String getTellno() {
+        return tellno;
     }
 
+    public void setTellno(String tellno) {
+        this.tellno = tellno;
+    }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public NbUser(String userid, String name, String passw, String info, String tellno, String email) {
+        this.userid = userid;
+        this.name = name;
+        this.passw = passw;
+        this.info = info;
+        this.tellno = tellno;
+        this.email = email;
+    }
+
+    public NbUser() {
+    }
+
+    @Override
+    public String toString() {
+        return "NbUser{" +
+                "userid='" + userid + '\'' +
+                ", name='" + name + '\'' +
+                ", passw='" + passw + '\'' +
+                ", info='" + info + '\'' +
+                ", tellno='" + tellno + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

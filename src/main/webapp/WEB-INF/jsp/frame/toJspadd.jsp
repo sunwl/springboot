@@ -42,9 +42,7 @@
 
 </head>
 <body>
-<div class="headbar">
-    Add Jsp
-</div>
+
 
 <form action="<%=basePath%>spt/toAJSP"  method="post" class="form">
     描述：<input type="text" value="zhangsandeeeee"name="v_desc"></input><br/>
@@ -53,10 +51,10 @@
     简介：<input type="text"  value="学而不思则罔"name="info"></input><br/>
     <input type="submit" value="提交">
 </form>
-<div class="bar">
+
 <a href="<%=basePath%>spt/toCon">跳转HTML</a>
 <a href="<%=basePath%>spt/toCon1">跳转INFO列表</a>
-</div>
+
 
 </body>
 </html>

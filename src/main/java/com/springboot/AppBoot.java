@@ -10,7 +10,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 /**
  * 依赖的maven库为 <localRepository>D:\java\maven\repository</localRepository>
  * 项目启动类
- * 访问http://localhost:8002/myboot/fw?commond=toCon
+ * 访问http://localhost:8002/myboot/
  *
  */
 @SpringBootApplication
@@ -20,5 +20,4 @@ public class AppBoot extends SpringBootServletInitializer {
         SpringApplication.run(AppBoot.class, args);
         logger.info("main(String[] args)");
     }
-
 }

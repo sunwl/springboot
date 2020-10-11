@@ -23,6 +23,13 @@ public class ToController {
     @Autowired
     private SeeService seeService;
 
+    /**
+     * 该方法模拟内部跳转，foward模式
+     * @param r
+     * @param m
+     * @param a
+     * @return
+     */
     @RequestMapping("/toCon")
     public String to(HttpServletRequest r, HttpServletResponse m, String a) {
         logger.info("to(HttpServletRequest r,HttpServletResponse m,String a)" + m);

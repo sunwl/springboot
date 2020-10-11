@@ -1,17 +1,17 @@
 package com.springboot.service.userservice;
 
+import com.springboot.bean.user.NbUser;
+
 import java.util.List;
 
-import com.springboot.bean.user.User;
-
-public interface UserService {
+public interface NbUserService {
 
     /**
      * 保存用户对象
      *
      * @param user
      */
-    void save(User user);
+    void save(NbUser user);
 
-    List<User> findAll();
+    List<NbUser> findAll();
 }
