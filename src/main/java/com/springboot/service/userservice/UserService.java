@@ -1,8 +1,9 @@
 package com.springboot.service.userservice;
 
-import java.util.List;
-
 import com.springboot.bean.user.User;
+import com.springboot.bean.user.UserSee;
+
+import java.util.List;
 
 public interface UserService {
 
@@ -11,7 +12,11 @@ public interface UserService {
      *
      * @param user
      */
-    void save(User user);
-
+    public void save(User user);
+    public User find(String username);
+    public User find(String username,String usepass);
     List<User> findAll();
+    public User findBySQL(String name);
+    public int setpasswd(String paw,Long id);
+    public List<UserSee> getUserSee();
 }

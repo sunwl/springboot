@@ -58,7 +58,7 @@
     </tbody>
 </table>
 </div>
-
+<input type="text" th:value="${tocken}" name="tocken" id="tockens"></input><br/>
 <div class="bar">
     <table>
         <tr>
@@ -73,7 +73,7 @@
                 <form action="#"
                       th:action="${#httpServletRequest.getScheme()+'://'+#httpServletRequest.getServerName()+':'+#httpServletRequest.getServerPort()+#httpServletRequest.getContextPath()+'/spt/toFrame'}"
                       method="post">
-                    <input type="submit" value="跳转到JSP2"></input>
+                      <input type="submit" value="跳转到JSP2"></input>
                 </form>
             </td>
 
@@ -93,5 +93,10 @@
 
 </div>
 <script th:src="@{/js/mybar.js}"></script>
+<script>
+    $(function(){
+
+    });
+</script>
 </body>
 </html>

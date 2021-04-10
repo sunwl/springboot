@@ -4,10 +4,12 @@ var char3="<script language=javascript src='"+projectName+"/js/Chart3.0.js' ></s
 var jquery="<script language=javascript src='"+projectName+"/js/jquery.min.js'></script>";
 var bootstrap="<script language=javascript src='"+projectName+"/bootstrap/js/bootstrap.min.js' ></script>";
 var mainjs="<script language=javascript src='"+projectName+"/js/main.js' ></script>";
+var md5js="<script language=javascript src='"+projectName+"/js/jquery.md5.js' ></script>";
 document.write(jquery);
 document.write(char3);
 document.write(bootstrap);
 document.write(mainjs);
+document.write(md5js);
 
 var mybarcss="<link rel=stylesheet type=text/css href='"+projectName+"/css/mybar.css'/>";
 var bootstrapcss="<link rel=stylesheet type=text/css href='"+projectName+"/bootstrap/css/bootstrap.css'/>";

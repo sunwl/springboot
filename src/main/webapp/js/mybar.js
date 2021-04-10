@@ -260,10 +260,13 @@
 
 
     function clockquery() {
+       var tockerns=$('#tockens').val();
+        console.log("---------------------------");
+       console.log(tockerns);
         $.ajax({
             type: 'POST',
             url: projectName + "/fw",
-            data: {commond: 'ajaxdata'},
+            data: {commond: 'ajaxdata',tocken:tockerns},
             async: true,
             success: function (result) {
                 ajaxs(result);

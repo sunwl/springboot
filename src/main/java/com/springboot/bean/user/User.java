@@ -4,15 +4,23 @@ import com.springboot.bean.base.BaseBean;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.Date;
 
 @Entity
-@Table(name = "test")
+@Table(name = "T_USER")
 public class User extends BaseBean {
 
     private String name;
     private int age;
     private String info;
+    private String passw;
+
+    public String getPassw() {
+        return passw;
+    }
+
+    public void setPassw(String passw) {
+        this.passw = passw;
+    }
 
     public String getName() {
         return name;

@@ -7,11 +7,7 @@
          version="3.0">
 
     <display-name>Archetype Created Web Application</display-name>
-    <!-- Spring和Mybatis的配置文件 -->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-redis.xml</param-value>
-    </context-param>
+
     <!-- 编码过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>
@@ -79,13 +75,5 @@
     <listener>
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
     </listener>
-
-
-
-
-    <welcome-file-list>
-        <welcome-file>/html/index.html</welcome-file>
-    </welcome-file-list>
-
 
 </web-app>
